@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import CreateEvent from './pages/CreateEvent';
 import EcoTips from './pages/EcoTips';
 import Certificates from './pages/Certificates';
+import HelloCard from './components/HelloCard';
 
 // Protected Route component for authenticated users
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -46,6 +47,11 @@ const AppContent: React.FC = () => {
           <Route path="/register" element={
             <PublicRoute>
               <Register />
+            </PublicRoute>
+          } />
+          <Route path="/hello" element={
+            <PublicRoute>
+              <HelloCard/>
             </PublicRoute>
           } />
           
